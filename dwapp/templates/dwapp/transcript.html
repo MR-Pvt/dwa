@@ -1,0 +1,120 @@
+{% extends 'dwapp/main.html' %}
+
+{% block content %}
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+
+#box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  right:2px;
+  width: 700px;
+  height: 842px;
+  color: white;
+  font-family: "Calibri";
+  font-size: 1.1rem;
+  margin: auto;
+  padding: 10px;
+  top: 15px;
+}
+#box2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  left:2px;
+  width: 550px;
+  height: 842px;
+  color: white;
+  font-family: "Calibri";
+  font-size: 1.1rem;
+  margin: auto;
+  padding: 10px;
+  top: 15px;
+ 
+}
+.gradient-border {
+  --borderWidth: 3px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+table, th, td {
+  table-layout: fixed;
+  border: 1px solid #586470;
+}
+
+</style>
+<div class="gradient-border" id="box">
+    <h1 contenteditable='true' style="left: 19px; top: 10px; position: absolute;">Shooting Script</h1>
+    <h5 style="left: 19px; top: 63px; position: absolute; color: #afafaf;">Project Title: </h5>
+    <h5 contenteditable='true' style="left: 127px; top: 63px; position: absolute; color: #afafaf;">My Documentry</h5>
+    <h5 style="left: 19px; top: 83px; position: absolute; color: #afafaf;">Duration:</h5>
+    <h5 contenteditable='true' style="left: 101px; top: 83px; position: absolute; color: #afafaf;">1 Hour</h5>
+    <h5 style="left: 19px; top: 105px; position: absolute; color: #afafaf;">TX Date: </h5>
+    <h5 contenteditable='true' style="left: 91px; top: 105px; position: absolute; color: #afafaf;">1 Jan 2021</h5>
+    <h4 style="left: 19px; top: 152px; position: absolute; color:white; font-weight: bolder;">Act </h5>
+    <h4 contenteditable='true' style="left: 61px; top: 152px; position: absolute; color:white; font-weight: bolder;">1</h5>
+    
+   
+    <table style="width: 94%; top: 184px; position: absolute; left: 20px;">
+        <tr>
+          <th style="width: 72px;">NO.</th>
+          <th>MEDIA</th>
+          <th>SCRIPT</th>
+        </tr>
+
+        <tr >
+          
+          <td contenteditable='true'>01</td>
+          <td><input type="file"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+          <td contenteditable='true'>50</td>
+        </tr>
+      </table>
+</div>
+<div class="gradient-border" id="box2">
+    
+    <h2 style="position: fixed; top: 197px; font-size: 20px;">PLease select the SRT files</h2>
+    <table style="width: 50%; top: 184px; position: absolute; align-items:center;">
+        <tr>
+          <th style="width: 500px;">TRANSCRIPT.</th> 
+        </tr>
+
+        <tr >
+          <td><a><input type="file"></a></td> 
+        </tr>
+      </table>
+</div>11:59 PM 05/05/2021 
+
+{% endblock %}
